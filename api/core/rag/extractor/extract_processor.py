@@ -114,8 +114,8 @@ class ExtractProcessor:
                     elif file_extension in {".md", ".markdown", ".mdx"}:
                         extractor = (
                             UnstructuredMarkdownExtractor(file_path, unstructured_api_url, unstructured_api_key)
-                            if is_automatic
-                            else MarkdownExtractor(file_path, autodetect_encoding=True)
+                            # if is_automatic
+                            # else MarkdownExtractor(file_path, autodetect_encoding=True)
                         )
                     elif file_extension in {".htm", ".html"}:
                         extractor = HtmlExtractor(file_path)

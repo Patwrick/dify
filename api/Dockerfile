@@ -48,6 +48,7 @@ ENV TZ=UTC
 
 WORKDIR /app/api
 
+RUN apt-get update && apt-get install -y libmagic1
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl nodejs libgmp-dev libmpfr-dev libmpc-dev \
     # if you located in China, you can use aliyun mirror to speed up
